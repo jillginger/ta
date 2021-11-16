@@ -1,0 +1,70 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\jillb\OneDrive - UBC\CONS 302 TA 2021Fall\flip class\log\lottery.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Nov 2021, 08:55:40
+{txt}
+{com}. 
+. *final presentation order lottery draw
+. *Jing Jiang
+. *2021-11-16
+. 
+. set obs = 8
+{err}'=' invalid
+{p 4 4 2}
+It is not an integer or its
+value is too large.
+{p_end}
+{txt}{search r(198), local:r(198);}
+
+end of do-file
+
+{search r(198), local:r(198);}
+
+{com}. do "C:\Users\jillb\AppData\Local\Temp\STD344c_000000.tmp"
+{txt}
+{com}. set obs 8
+{txt}{p}
+number of observations (_N)  was 0,
+now 8
+{p_end}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\jillb\AppData\Local\Temp\STD344c_000000.tmp"
+{txt}
+{com}. g group_n = _n
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\jillb\AppData\Local\Temp\STD344c_000000.tmp"
+{txt}
+{com}. set seed 49
+{txt}
+{com}. g lottery = rnormal()*3 + 100
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\jillb\AppData\Local\Temp\STD344c_000000.tmp"
+{txt}
+{com}. sort lottery
+{txt}
+{com}. g pre_order = _n
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\jillb\AppData\Local\Temp\STD344c_000000.tmp"
+{txt}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\jillb\OneDrive - UBC\CONS 302 TA 2021Fall\flip class\log\lottery.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Nov 2021, 09:24:23
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
